@@ -148,3 +148,26 @@ nav a {
   border: none;
   cursor: pointer;
 }
+.booking-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  padding: 12px;
+  font-size: 15px;
+}
+
+.booking-form button {
+  padding: 12px;
+  background: rgb(27, 74, 43);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
