@@ -6,6 +6,49 @@
 }
 
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #1b4a2b;
+}
+
+.book-btn {
+  background-color: rgb(27, 74, 43);
+  padding: 8px 14px;
+  border-radius: 5px;
   background: #f4f4f4;
   color: #222;
 }
