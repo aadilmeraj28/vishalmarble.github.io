@@ -1,117 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Vishal Marble Logo">
-    <span>Vishal Marble</span>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="cart.html">Cart</a>
-    <a href="booking.html" class="book-btn">Advance Booking</a>
-  </nav>
-  
-
   <meta charset="UTF-8">
   <title>Vishal Marble | Quality Marble for Every Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <img src="logo.png" alt="Vishal Marble Logo" class="logo">
-      <nav>
-        <!-- HEADER NAV (replace nav only) -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="cart.html">Cart</a>
-  <a href="#contact">Contact</a>
-  <a href="booking.html">Advance Booking</a>
-
-</nav>
-
-      </nav>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Vishal Marble Logo">
+      <span>Vishal Marble</span>
     </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="cart.html">Cart</a>
+      <a href="booking.html" class="book-btn">Advance Booking</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <h1>Vishal Marble</h1>
-    <p>Quality Marble for Every Home</p>
-    <p class="sub">Advance booking available • Pickup from shop</p>
-    <a href="#contact" class="btn">Book / Enquire</a>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <h1>Quality Marble for Every Home</h1>
+    <p>
+      Vishal Marble, Supriya Road, Bettiah, Bihar<br>
+      Contact: 8409949407<br>
+      Open: Mon–Sat (9:00 AM – 6:30 PM), Sunday till 4:00 PM
+    </p>
   </section>
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
-    <h2>Our Products</h2>
+  <!-- ===== BOOKING PROMO ===== -->
+  <section class="hero-secondary">
+    <h2>Vishal Marble</h2>
+    <p>Advance booking available • Pickup from shop</p>
+    <button onclick="window.location.href='booking.html'">
+      Book / Enquire
+    </button>
+  </section>
 
-    <div class="product-grid">
-      <div class="product-card">
-        <h3>Marble</h3>
-        <p>5 premium types of quality marble</p>
-      </div>
+  <!-- ===== PRODUCTS OVERVIEW ===== -->
+  <h2 class="section-title">Our Products</h2>
 
-      <div class="product-card">
-        <h3>Water Tanki</h3>
-        <p>3 strong & durable tanki varieties</p>
-      </div>
+  <section class="products">
+    <div class="product-card">
+      <h3>Marble</h3>
+      <p>5 premium types of quality marble</p>
+    </div>
 
-      <div class="product-card">
-        <h3>Tiles</h3>
-        <p>13 modern tile designs</p>
-      </div>
+    <div class="product-card">
+      <h3>Water Tanki</h3>
+      <p>3 strong & durable tanki varieties</p>
+    </div>
 
-      <div class="product-card">
-        <h3>Boring Fittings</h3>
-        <p>56 articles (Article 1, Article 2, ...)</p>
-      </div>
+    <div class="product-card">
+      <h3>Tiles</h3>
+      <p>13 modern tile designs</p>
+    </div>
+
+    <div class="product-card">
+      <h3>Boring Fittings</h3>
+      <p>56 articles (Article 1, Article 2, ...)</p>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Visit Our Shop</h2>
-
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p><strong>Visit Our Shop</strong></p>
     <p>
-      📍 Vishal Marble, Supriya Road,<br>
+      Vishal Marble, Supriya Road,<br>
       West Champaran, Bettiah,<br>
       Bihar – 845438
     </p>
-
-    <p>📞 Call: <a href="tel:8409949407">8409949407</a></p>
-
-    <p>
-      🕒 Timings:<br>
-      Mon–Sat: 9:00 AM – 6:30 PM<br>
-      Sunday: 9:00 AM – 4:00 PM
-    </p>
-
-    <a class="btn whatsapp" href="https://wa.me/918409949407" target="_blank">
-      WhatsApp Enquiry
-    </a>
-    <section class="map">
-  <h2>Find Us on Map</h2>
-  <iframe 
-    src="https://www.google.com/maps?q=Vishal%20Marble%20Supriya%20Road%20Bettiah&output=embed"
-    loading="lazy">
-  </iframe>
-</section>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Vishal Marble. All rights reserved.</p>
+    <p>📞 8409949407</p>
   </footer>
 
 </body>
