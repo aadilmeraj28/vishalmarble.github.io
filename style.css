@@ -129,3 +129,22 @@ nav a {
     font-size: 14px;
   }
 }
+.map {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.map iframe {
+  width: 90%;
+  height: 350px;
+  border: none;
+}
+
+.product-card button {
+  margin-top: 15px;
+  padding: 10px;
+  background: rgb(27, 74, 43);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
