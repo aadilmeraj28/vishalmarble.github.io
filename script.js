@@ -16,3 +16,21 @@ window.onload = function () {
     list.appendChild(li);
   });
 };
+function sendBooking() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let product = document.getElementById("product").value;
+  let date = document.getElementById("date").value;
+  let msg = document.getElementById("message").value;
+
+  let text =
+    "Advance Booking - Vishal Marble%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Product: " + product + "%0A" +
+    "Pickup Date: " + date + "%0A" +
+    "Message: " + msg;
+
+  let url = "https://wa.me/918409949407?text=" + text;
+  window.open(url, "_blank");
+}
