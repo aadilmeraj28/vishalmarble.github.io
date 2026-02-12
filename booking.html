@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advance Booking | Vishal Marble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <img src="logo.png" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </div>
+</header>
+
+<section class="products">
+  <h2>Advance Booking (Pickup from Shop)</h2>
+
+  <form class="booking-form" onsubmit="sendBooking(); return false;">
+
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+    <select id="product" required>
+      <option value="">Select Product</option>
+      <option>Marble</option>
+      <option>Tiles</option>
+      <option>Water Tanki</option>
+      <option>Boring Fittings</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <textarea id="message" placeholder="Extra details (optional)"></textarea>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
