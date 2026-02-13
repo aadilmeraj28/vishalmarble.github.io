@@ -1,63 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Vishal Marble Logo">
-    <span>Vishal Marble</span>
-  </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advance Booking | Vishal Marble</title>
 
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  color:#222;
+}
+
+/* NAVBAR */
+header{
+  background:#000;
+  color:#fff;
+  padding:15px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  font-size:22px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* PAGE WRAP */
+.page{
+  max-width:900px;
+  margin:80px auto;
+  background:#fff;
+  padding:50px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.page h2{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.page p{
+  text-align:center;
+  color:#555;
+  margin-bottom:40px;
+}
+
+/* FORM */
+form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+form input,
+form select,
+form textarea{
+  padding:12px;
+  border:1px solid #ccc;
+  font-size:14px;
+  width:100%;
+}
+
+form textarea{
+  grid-column:1 / -1;
+  resize:none;
+  height:90px;
+}
+
+form button{
+  grid-column:1 / -1;
+  padding:14px;
+  background:#1f4d2f;
+  color:#fff;
+  border:none;
+  font-size:15px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#163b24;
+}
+
+/* FOOTER */
+footer{
+  margin-top:100px;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  form{
+    grid-template-columns:1fr;
+  }
+
+  .page{
+    margin:40px 15px;
+    padding:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Vishal Marble</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
     <a href="gallery.html">Gallery</a>
-    <a href="cart.html">Cart</a>
-    <a href="booking.html" class="book-btn">Advance Booking</a>
+    <a href="booking.html">Advance Booking</a>
   </nav>
-  <meta charset="UTF-8">
-  <title>Advance Booking | Vishal Marble</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="header">
-  <div class="container">
-    <img src="logo.png" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart</a>
-    </nav>
-  </div>
 </header>
 
-<section class="products">
-  <h2>Advance Booking (Pickup from Shop)</h2>
+<div class="page">
+  <h2>Advance Booking</h2>
+  <p>Pickup from shop • No online payment required</p>
 
-  <form class="booking-form" onsubmit="sendBooking(); return false;">
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
 
-    <input type="text" id="name" placeholder="Your Name" required>
-
-    <input type="tel" id="phone" placeholder="Mobile Number" required>
-
-    <select id="product" required>
+    <select required>
       <option value="">Select Product</option>
       <option>Marble</option>
       <option>Tiles</option>
-      <option>Water Tanki</option>
+      <option>Water Tank</option>
       <option>Boring Fittings</option>
     </select>
 
-    <input type="date" id="date" required>
+    <input type="date" required>
 
-    <textarea id="message" placeholder="Extra details (optional)"></textarea>
+    <textarea placeholder="Extra details (optional)"></textarea>
 
     <button type="submit">Confirm Booking</button>
   </form>
+</div>
 
-</section>
+<footer>
+  <p><strong>Vishal Marble</strong></p>
+  <p>Supriya Road, Bettiah, Bihar – 845438</p>
+  <p>📞 8409949407</p>
+</footer>
 
-<script src="script.js"></script>
 </body>
 </html>
