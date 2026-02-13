@@ -2,282 +2,253 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vishal Marble</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishal Marble | Premium Marble & Tiles</title>
 
   <style>
-    :root {
-      --black: #0b0b0b;
-      --green: #174d2d;
-      --green-dark: #0f3a21;
-      --yellow: #d4af37; /* minimal use */
-      --white: #ffffff;
-      --gray: #eaeaea;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: "Segoe UI", sans-serif;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
 
     body {
-      background: var(--black);
-      color: var(--white);
+      background: #f4f4f4;
+      color: #222;
     }
 
-    /* ---------- NAVBAR ---------- */
-    nav {
+    /* NAVBAR */
+    header {
       background: #000;
-      padding: 16px 40px;
+      color: #fff;
+      padding: 15px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav h2 {
-      color: var(--white);
-      font-weight: 600;
+    header h1 {
+      font-size: 22px;
+      letter-spacing: 1px;
     }
 
     nav a {
-      color: var(--white);
+      color: #fff;
       text-decoration: none;
-      margin-left: 24px;
-      font-size: 15px;
+      margin-left: 25px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: var(--yellow);
+      text-decoration: underline;
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
     .hero {
-      background: linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
-      ), var(--green);
-      padding: 100px 20px;
+      background: #1f4d2f;
+      color: #fff;
+      padding: 90px 20px;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 48px;
+    .hero h2 {
+      font-size: 42px;
       margin-bottom: 12px;
+      letter-spacing: 1px;
     }
 
     .hero p {
-      font-size: 18px;
-      opacity: 0.9;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.95;
     }
 
     .hero button {
-      margin-top: 30px;
-      padding: 14px 34px;
-      background: var(--black);
-      color: var(--white);
-      border: 1px solid var(--yellow);
+      margin-top: 28px;
+      padding: 12px 32px;
+      background: #000;
+      color: #fff;
+      border: none;
+      font-size: 14px;
       cursor: pointer;
-      font-size: 16px;
+      letter-spacing: 1px;
     }
 
     .hero button:hover {
-      background: var(--yellow);
-      color: #000;
+      background: #222;
     }
 
-    /* ---------- SECTION ---------- */
+    /* SECTION */
     section {
-      padding: 70px 40px;
+      padding: 60px 70px;
       background: #fff;
-      color: #000;
     }
 
-    section h2 {
+    section h3 {
       text-align: center;
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 40px;
+      letter-spacing: 1px;
     }
 
-    /* ---------- PRODUCTS ---------- */
+    /* PRODUCTS */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
     }
 
     .product {
-      background: #fff;
-      border-left: 5px solid var(--green);
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border: 1px solid #ddd;
+      padding: 25px;
+      text-align: center;
+      background: #fafafa;
     }
 
-    .product h3 {
+    .product h4 {
       margin-bottom: 10px;
+      font-size: 18px;
     }
 
-    .product button {
-      margin-top: 15px;
-      width: 100%;
-      padding: 10px;
-      background: var(--green);
-      color: #fff;
-      border: none;
-      cursor: pointer;
+    .product p {
+      font-size: 14px;
+      color: #555;
     }
 
-    .product button:hover {
-      background: var(--green-dark);
+    /* MAP */
+    .map-section {
+      background: #fff;
+      padding: 60px 40px;
+      text-align: center;
     }
 
-    /* ---------- CART ---------- */
-    #cart {
-      background: var(--gray);
-      margin-top: 60px;
-      padding: 30px;
+    .map-section h3 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
     }
 
-    #cart h3 {
-      margin-bottom: 15px;
+    .map-container {
+      max-width: 1100px;
+      margin: auto;
+      border: 3px solid #1f4d2f;
     }
 
-    #cart ul {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-
-    #cart li {
-      margin-bottom: 6px;
-    }
-
-    #bookBtn {
-      padding: 12px 26px;
-      background: var(--black);
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-
-    #bookBtn:hover {
-      background: var(--green);
-    }
-
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
     footer {
       background: #000;
-      padding: 40px;
+      color: #fff;
+      padding: 50px 20px;
       text-align: center;
-      font-size: 14px;
     }
 
     footer p {
-      margin: 6px 0;
-      opacity: 0.85;
+      margin: 8px 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 50px 25px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
-  <nav>
-    <h2>Vishal Marble</h2>
-    <div>
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#cart">Cart</a>
-    </div>
-  </nav>
+  <header>
+    <h1>Vishal Marble</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Advance Booking</a>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <div class="hero">
-    <h1>Premium Marble & Construction Materials</h1>
-    <p>Advance booking available • Pickup from shop</p>
-    <button onclick="document.getElementById('products').scrollIntoView()">Explore Products</button>
+    <h2>Premium Marble for Elegant Homes</h2>
+    <p>
+      Quality marble, tiles & fittings<br>
+      Advance booking available • Pickup from shop
+    </p>
+    <button onclick="location.href='booking.html'">Book / Enquire</button>
   </div>
 
   <!-- PRODUCTS -->
-  <section id="products">
-    <h2>Our Products</h2>
+  <section>
+    <h3>Our Products</h3>
 
     <div class="products">
       <div class="product">
-        <h3>Premium Marble</h3>
-        <p>High quality marble slabs</p>
-        <button onclick="addToCart('Premium Marble')">Add to Cart</button>
+        <h4>Marble</h4>
+        <p>Premium quality marble for flooring & interiors</p>
       </div>
 
       <div class="product">
-        <h3>Water Tank</h3>
-        <p>Durable & long-lasting tanks</p>
-        <button onclick="addToCart('Water Tank')">Add to Cart</button>
+        <h4>Tiles</h4>
+        <p>Modern wall & floor tile collections</p>
       </div>
 
       <div class="product">
-        <h3>Tiles</h3>
-        <p>Modern tile designs</p>
-        <button onclick="addToCart('Tiles')">Add to Cart</button>
+        <h4>Water Tanks</h4>
+        <p>Strong & durable domestic water tanks</p>
       </div>
 
       <div class="product">
-        <h3>Boring Fittings</h3>
-        <p>Complete fitting solutions</p>
-        <button onclick="addToCart('Boring Fittings')">Add to Cart</button>
+        <h4>Boring Fittings</h4>
+        <p>Reliable plumbing & boring-related fittings</p>
       </div>
     </div>
   </section>
 
-  <!-- CART -->
-  <section id="cart">
-    <h3>Your Cart</h3>
-    <ul id="cartItems"></ul>
-    <button id="bookBtn" onclick="bookWhatsApp()">Book / Enquire on WhatsApp</button>
+  <!-- MAP -->
+  <section class="map-section">
+    <h3>Find Us on Map</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Vishal%20Marble%20Supriya%20Road%20Bettiah%20Bihar&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p><strong>Visit Our Shop</strong></p>
-    <p>Vishal Marble, Supriya Road</p>
-    <p>West Champaran, Bettiah, Bihar – 845438</p>
+    <p><strong>Vishal Marble</strong></p>
+    <p>Supriya Road, West Champaran</p>
+    <p>Bettiah, Bihar – 845438</p>
     <p>📞 8409949407</p>
-    <p>Mon–Sat: 9:00 AM – 6:30 PM | Sun: 9:00 AM – 4:00 PM</p>
+    <p>Mon–Sat: 9:00 AM – 6:30 PM | Sunday: Till 4:00 PM</p>
   </footer>
-
-  <!-- SCRIPT -->
-  <script>
-    let cart = [];
-
-    function addToCart(product) {
-      cart.push(product);
-      renderCart();
-    }
-
-    function renderCart() {
-      const list = document.getElementById("cartItems");
-      list.innerHTML = "";
-      cart.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.textContent = (index + 1) + ". " + item;
-        list.appendChild(li);
-      });
-    }
-
-    function bookWhatsApp() {
-      if (cart.length === 0) {
-        alert("Cart is empty");
-        return;
-      }
-
-      let message = "Hello Vishal Marble,%0A%0AI want to book the following items:%0A";
-      cart.forEach((item, i) => {
-        message += (i + 1) + ". " + item + "%0A";
-      });
-
-      const phone = "918409949407";
-      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-    }
-  </script>
 
 </body>
 </html>
