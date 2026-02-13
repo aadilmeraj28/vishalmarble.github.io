@@ -1,254 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishal Marble | Premium Marble & Tiles</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal Marble | Premium Marble & Tiles</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
 
-    body {
-      background: #f4f4f4;
-      color: #222;
-    }
+body{
+  background:#f4f4f4;
+  color:#222;
+}
 
-    /* NAVBAR */
-    header {
-      background: #000;
-      color: #fff;
-      padding: 15px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+/* NAVBAR */
+header{
+  background:#000;
+  color:#fff;
+  padding:18px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    header h1 {
-      font-size: 22px;
-      letter-spacing: 1px;
-    }
+header h1{
+  font-size:22px;
+  letter-spacing:1px;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 500;
-    }
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:28px;
+  font-weight:500;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover{
+  text-decoration:underline;
+}
 
-    /* HERO */
-    .hero {
-      background: #1f4d2f;
-      color: #fff;
-      padding: 90px 20px;
-      text-align: center;
-    }
+/* HERO */
+.hero{
+  background:#1f4d2f;
+  color:#fff;
+  padding:120px 40px;
+  text-align:center;
+}
 
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
-    }
+.hero h2{
+  font-size:42px;
+  margin-bottom:15px;
+}
 
-    .hero p {
-      font-size: 16px;
-      line-height: 1.6;
-      opacity: 0.95;
-    }
+.hero p{
+  font-size:17px;
+  opacity:0.95;
+  margin-bottom:35px;
+}
 
-    .hero button {
-      margin-top: 28px;
-      padding: 12px 32px;
-      background: #000;
-      color: #fff;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-      letter-spacing: 1px;
-    }
+.hero a{
+  display:inline-block;
+  padding:14px 32px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+}
 
-    .hero button:hover {
-      background: #222;
-    }
+.hero a:hover{
+  background:#111;
+}
 
-    /* SECTION */
-    section {
-      padding: 60px 70px;
-      background: #fff;
-    }
+/* SECTIONS */
+.section{
+  padding:80px 60px;
+  background:#fff;
+}
 
-    section h3 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 40px;
-      letter-spacing: 1px;
-    }
+.section h3{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:50px;
+}
 
-    /* PRODUCTS */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+/* PRODUCTS PREVIEW */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
 
-    .product {
-      border: 1px solid #ddd;
-      padding: 25px;
-      text-align: center;
-      background: #fafafa;
-    }
+.card{
+  background:#fafafa;
+  padding:30px;
+  text-align:center;
+  border-left:4px solid #1f4d2f;
+}
 
-    .product h4 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
+.card h4{
+  margin-bottom:8px;
+}
 
-    .product p {
-      font-size: 14px;
-      color: #555;
-    }
+/* FOOTER */
+footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:50px 20px;
+  margin-top:80px;
+}
 
-    /* MAP */
-    .map-section {
-      background: #fff;
-      padding: 60px 40px;
-      text-align: center;
-    }
+/* MOBILE */
+@media(max-width:900px){
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+}
 
-    .map-section h3 {
-      font-size: 26px;
-      margin-bottom: 30px;
-      letter-spacing: 1px;
-    }
-
-    .map-container {
-      max-width: 1100px;
-      margin: auto;
-      border: 3px solid #1f4d2f;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 8px 0;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 25px;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin-left: 15px;
-        font-size: 14px;
-      }
-
-      .hero h2 {
-        font-size: 32px;
-      }
-
-      section {
-        padding: 50px 25px;
-      }
-    }
-  </style>
+@media(max-width:600px){
+  header{
+    flex-direction:column;
+    gap:10px;
+  }
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <h1>Vishal Marble</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="booking.html">Advance Booking</a>
-    </nav>
-  </header>
+<header>
+  <h1>Vishal Marble</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Advance Booking</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h2>Premium Marble for Elegant Homes</h2>
-    <p>
-      Quality marble, tiles & fittings<br>
-      Advance booking available • Pickup from shop
-    </p>
-    <button onclick="location.href='booking.html'">Book / Enquire</button>
+<section class="hero">
+  <h2>Quality Marble for Every Home</h2>
+  <p>Premium marble, tiles, water tanks & fittings — showroom pickup available</p>
+  <a href="booking.html">Book / Enquire</a>
+</section>
+
+<section class="section">
+  <h3>Our Collections</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Marble</h4>
+      <p>5 premium marble varieties</p>
+    </div>
+    <div class="card">
+      <h4>Tiles</h4>
+      <p>13 modern tile designs</p>
+    </div>
+    <div class="card">
+      <h4>Water Tanks</h4>
+      <p>3 strong & durable types</p>
+    </div>
+    <div class="card">
+      <h4>Boring Fittings</h4>
+      <p>56 essential fittings</p>
+    </div>
   </div>
+</section>
 
-  <!-- PRODUCTS -->
-  <section>
-    <h3>Our Products</h3>
-
-    <div class="products">
-      <div class="product">
-        <h4>Marble</h4>
-        <p>Premium quality marble for flooring & interiors</p>
-      </div>
-
-      <div class="product">
-        <h4>Tiles</h4>
-        <p>Modern wall & floor tile collections</p>
-      </div>
-
-      <div class="product">
-        <h4>Water Tanks</h4>
-        <p>Strong & durable domestic water tanks</p>
-      </div>
-
-      <div class="product">
-        <h4>Boring Fittings</h4>
-        <p>Reliable plumbing & boring-related fittings</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="map-section">
-    <h3>Find Us on Map</h3>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=Vishal%20Marble%20Supriya%20Road%20Bettiah%20Bihar&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p><strong>Vishal Marble</strong></p>
-    <p>Supriya Road, West Champaran</p>
-    <p>Bettiah, Bihar – 845438</p>
-    <p>📞 8409949407</p>
-    <p>Mon–Sat: 9:00 AM – 6:30 PM | Sunday: Till 4:00 PM</p>
-  </footer>
+<footer>
+  <p><strong>Vishal Marble</strong></p>
+  <p>Supriya Road, Bettiah, Bihar – 845438</p>
+  <p>📞 8409949407</p>
+</footer>
 
 </body>
 </html>
