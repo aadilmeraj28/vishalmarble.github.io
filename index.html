@@ -1,87 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vishal Marble | Quality Marble for Every Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <title>Vishal Marble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <img src="logo.png" alt="Vishal Marble Logo" class="logo">
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --green: #174d2d;
+      --green-dark: #0f3a21;
+      --yellow: #d4af37; /* minimal use */
+      --white: #ffffff;
+      --gray: #eaeaea;
+    }
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <h1>Vishal Marble</h1>
-    <p>Quality Marble for Every Home</p>
-    <p class="sub">Advance booking available • Pickup from shop</p>
-    <a href="#contact" class="btn">Book / Enquire</a>
-  </section>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
-    <h2>Our Products</h2>
+    body {
+      background: var(--black);
+      color: var(--white);
+    }
 
-    <div class="product-grid">
-      <div class="product-card">
-        <h3>Marble</h3>
-        <p>5 premium types of quality marble</p>
-      </div>
+    /* ---------- NAVBAR ---------- */
+    nav {
+      background: #000;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      <div class="product-card">
-        <h3>Water Tanki</h3>
-        <p>3 strong & durable tanki varieties</p>
-      </div>
+    nav h2 {
+      color: var(--white);
+      font-weight: 600;
+    }
 
-      <div class="product-card">
-        <h3>Tiles</h3>
-        <p>13 modern tile designs</p>
-      </div>
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+    }
 
-      <div class="product-card">
-        <h3>Boring Fittings</h3>
-        <p>56 articles (Article 1, Article 2, ...)</p>
-      </div>
-    </div>
-  </section>
+    nav a:hover {
+      color: var(--yellow);
+    }
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Visit Our Shop</h2>
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+      ), var(--green);
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-    <p>
-      📍 Vishal Marble, Supriya Road,<br>
-      West Champaran, Bettiah,<br>
-      Bihar – 845438
-    </p>
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
 
-    <p>📞 Call: <a href="tel:8409949407">8409949407</a></p>
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-    <p>
-      🕒 Timings:<br>
-      Mon–Sat: 9:00 AM – 6:30 PM<br>
-      Sunday: 9:00 AM – 4:00 PM
-    </p>
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 34px;
+      background: var(--black);
+      color: var(--white);
+      border: 1px solid var(--yellow);
+      cursor: pointer;
+      font-size: 16px;
+    }
 
-    <a class="btn whatsapp" href="https://wa.me/918409949407" target="_blank">
-      WhatsApp Enquiry
-    </a>
-  </section>
+    .hero button:hover {
+      background: var(--yellow);
+      color: #000;
+    }
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2026 Vishal Marble. All rights reserved.</p>
-  </footer>
+    /* ---------- SECTION ---------- */
+    section {
+      padding: 70px 40px;
+      background: #fff;
+      color: #000;
+    }
 
-</body>
-</html>
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* ---------- PRODUCTS ---------- */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: #fff;
+      border-left: 5px solid var(--green);
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .product h3 {
+      margin-bottom: 10px;
+    }
+
+    .product button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background: var(--green-dark);
+    }
+
+    /* ---------- CART ---------- */
+    #cart {
+      background: var(--gray);
+      margin-top: 60px;
+      padding: 30px;
+    }
+
+    #cart h3
