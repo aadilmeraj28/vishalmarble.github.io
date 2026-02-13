@@ -139,4 +139,145 @@
       padding: 30px;
     }
 
-    #cart h3
+    #cart h3 {
+      margin-bottom: 15px;
+    }
+
+    #cart ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    #cart li {
+      margin-bottom: 6px;
+    }
+
+    #bookBtn {
+      padding: 12px 26px;
+      background: var(--black);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #bookBtn:hover {
+      background: var(--green);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #000;
+      padding: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 6px 0;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Vishal Marble</h2>
+    <div>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Premium Marble & Construction Materials</h1>
+    <p>Advance booking available • Pickup from shop</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">Explore Products</button>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <h2>Our Products</h2>
+
+    <div class="products">
+      <div class="product">
+        <h3>Premium Marble</h3>
+        <p>High quality marble slabs</p>
+        <button onclick="addToCart('Premium Marble')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Water Tank</h3>
+        <p>Durable & long-lasting tanks</p>
+        <button onclick="addToCart('Water Tank')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Tiles</h3>
+        <p>Modern tile designs</p>
+        <button onclick="addToCart('Tiles')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Boring Fittings</h3>
+        <p>Complete fitting solutions</p>
+        <button onclick="addToCart('Boring Fittings')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART -->
+  <section id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cartItems"></ul>
+    <button id="bookBtn" onclick="bookWhatsApp()">Book / Enquire on WhatsApp</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Visit Our Shop</strong></p>
+    <p>Vishal Marble, Supriya Road</p>
+    <p>West Champaran, Bettiah, Bihar – 845438</p>
+    <p>📞 8409949407</p>
+    <p>Mon–Sat: 9:00 AM – 6:30 PM | Sun: 9:00 AM – 4:00 PM</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    let cart = [];
+
+    function addToCart(product) {
+      cart.push(product);
+      renderCart();
+    }
+
+    function renderCart() {
+      const list = document.getElementById("cartItems");
+      list.innerHTML = "";
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = (index + 1) + ". " + item;
+        list.appendChild(li);
+      });
+    }
+
+    function bookWhatsApp() {
+      if (cart.length === 0) {
+        alert("Cart is empty");
+        return;
+      }
+
+      let message = "Hello Vishal Marble,%0A%0AI want to book the following items:%0A";
+      cart.forEach((item, i) => {
+        message += (i + 1) + ". " + item + "%0A";
+      });
+
+      const phone = "918409949407";
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>
