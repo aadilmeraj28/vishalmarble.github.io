@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vishal Marble | Premium Marble & Tiles</title>
 
-  <link rel="stylesheet" href="style.css">
-
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
       background: #f4f4f4;
       color: #222;
     }
@@ -23,10 +26,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
-      margin: 0;
       font-size: 22px;
       letter-spacing: 1px;
     }
@@ -52,19 +57,19 @@
 
     .hero h2 {
       font-size: 42px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       letter-spacing: 1px;
     }
 
     .hero p {
       font-size: 16px;
-      opacity: 0.9;
       line-height: 1.6;
+      opacity: 0.95;
     }
 
     .hero button {
-      margin-top: 25px;
-      padding: 12px 30px;
+      margin-top: 28px;
+      padding: 12px 32px;
       background: #000;
       color: #fff;
       border: none;
@@ -114,6 +119,25 @@
       color: #555;
     }
 
+    /* MAP */
+    .map-section {
+      background: #fff;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .map-section h3 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .map-container {
+      max-width: 1100px;
+      margin: auto;
+      border: 3px solid #1f4d2f;
+    }
+
     /* FOOTER */
     footer {
       background: #000;
@@ -126,6 +150,28 @@
       margin: 8px 0;
       font-size: 14px;
       opacity: 0.9;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 50px 25px;
+      }
     }
   </style>
 </head>
@@ -145,7 +191,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <h2>VISHAL MARBLE</h2>
+    <h2>Premium Marble for Elegant Homes</h2>
     <p>
       Quality marble, tiles & fittings<br>
       Advance booking available • Pickup from shop
@@ -180,12 +226,27 @@
     </div>
   </section>
 
+  <!-- MAP -->
+  <section class="map-section">
+    <h3>Find Us on Map</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Vishal%20Marble%20Supriya%20Road%20Bettiah%20Bihar&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
-    <p><strong>Visit Our Shop</strong></p>
-    <p>Vishal Marble, Supriya Road</p>
-    <p>West Champaran, Bettiah, Bihar – 845438</p>
-    <p>Call: 8409949407</p>
+    <p><strong>Vishal Marble</strong></p>
+    <p>Supriya Road, West Champaran</p>
+    <p>Bettiah, Bihar – 845438</p>
+    <p>📞 8409949407</p>
     <p>Mon–Sat: 9:00 AM – 6:30 PM | Sunday: Till 4:00 PM</p>
   </footer>
 
