@@ -3,45 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishal Marble | Premium Marble & Tiles</title>
+<title>Vishal Marble | Premium Marble Showroom</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI", Arial, sans-serif;
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-<!-- ===== VISIT SHOP SECTION ===== -->
-<section class="visit-section">
-  <div class="visit-container">
-    <h2>Visit Our Shop</h2>
 
-    <p>📍 Vishal Marble, Supriya Road,<br>
-    West Champaran, Bettiah,<br>
-    Bihar – 845438</p>
+/* BODY */
+body {
+  background: #f4f4f4;
+  color: #222;
+}
 
-    <p>📞 Call: 8409949407</p>
+/* NAVBAR */
+header {
+  background: #000;
+  color: #fff;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    <p>🕒 Timings:<br>
-    Mon–Sat: 9:00 AM – 6:30 PM<br>
-    Sunday: 9:00 AM – 4:00 PM</p>
+header h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
 
-    <a href="https://wa.me/918409949407" target="_blank" class="whatsapp-btn">
-      WhatsApp Enquiry
-    </a>
-  </div>
-</section>
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  © 2026 Vishal Marble. All rights reserved.
-</footer>
+nav a:hover {
+  text-decoration: underline;
+}
 
-<style>
-/* ===== VISIT SECTION ===== */
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #111, #222);
+  color: #fff;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.hero a {
+  padding: 14px 32px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 10px;
+  border: 1px solid #fff;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 60px;
+  background: #fff;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #fafafa;
+  padding: 30px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin-bottom: 10px;
+}
+
+/* VISIT SECTION */
 .visit-section {
-  background-color: #000;
+  background: #000;
   color: #fff;
   text-align: center;
   padding: 60px 20px;
@@ -50,7 +127,6 @@
 .visit-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .visit-section p {
@@ -69,188 +145,107 @@
   text-decoration: none;
   font-weight: 600;
   border-radius: 6px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .whatsapp-btn:hover {
   background-color: #1ebe5d;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-  background-color: #111;
+  background: #111;
   color: #aaa;
   text-align: center;
   padding: 15px 0;
   font-size: 14px;
 }
-</style>
 
-body{
-  background:#f4f4f4;
-  color:#222;
-}
-
-/* NAVBAR */
-header{
-  background:#000;
-  color:#fff;
-  padding:18px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-header h1{
-  font-size:22px;
-  letter-spacing:1px;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:28px;
-  font-weight:500;
-}
-
-nav a:hover{
-  text-decoration:underline;
-}
-
-/* HERO */
-.hero{
-  background:#1f4d2f;
-  color:#fff;
-  padding:120px 40px;
-  text-align:center;
-}
-
-.hero h2{
-  font-size:42px;
-  margin-bottom:15px;
-}
-
-.hero p{
-  font-size:17px;
-  opacity:0.95;
-  margin-bottom:35px;
-}
-
-.hero a{
-  display:inline-block;
-  padding:14px 32px;
-  background:#000;
-  color:#fff;
-  text-decoration:none;
-  font-size:15px;
-}
-
-.hero a:hover{
-  background:#111;
-}
-
-/* SECTIONS */
-.section{
-  padding:80px 60px;
-  background:#fff;
-}
-
-.section h3{
-  text-align:center;
-  font-size:28px;
-  margin-bottom:50px;
-}
-
-/* PRODUCTS PREVIEW */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
-}
-
-.card{
-  background:#fafafa;
-  padding:30px;
-  text-align:center;
-  border-left:4px solid #1f4d2f;
-}
-
-.card h4{
-  margin-bottom:8px;
-}
-
-/* FOOTER */
-footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:50px 20px;
-  margin-top:80px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  .cards{
-    grid-template-columns:1fr 1fr;
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width:600px){
-  header{
-    flex-direction:column;
-    gap:10px;
+@media(max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
-  .cards{
-    grid-template-columns:1fr;
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
   <h1>Vishal Marble</h1>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booking.html">Advance Booking</a>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Gallery</a>
+    <a href="#">Advance Booking</a>
   </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-  <h2>Quality Marble for Every Home</h2>
-  <p>Premium marble, tiles, water tanks & fittings — showroom pickup available</p>
-  <a href="booking.html">Book / Enquire</a>
+  <h2>Premium Marble for Elegant Spaces</h2>
+  <p>High-quality marble showroom in Bettiah — Pickup Available</p>
+  <a href="#">View Collection</a>
+  <a href="https://wa.me/918409949407" target="_blank">Enquire Now</a>
 </section>
 
+<!-- COLLECTION SECTION -->
 <section class="section">
   <h3>Our Collections</h3>
   <div class="cards">
     <div class="card">
-      <h4>Marble</h4>
-      <p>5 premium marble varieties</p>
+      <h4>Premium Marble</h4>
+      <p>High-quality marble varieties for luxury interiors.</p>
     </div>
     <div class="card">
-      <h4>Tiles</h4>
-      <p>13 modern tile designs</p>
+      <h4>Designer Tiles</h4>
+      <p>Modern and stylish tile designs for every home.</p>
     </div>
     <div class="card">
       <h4>Water Tanks</h4>
-      <p>3 strong & durable types</p>
+      <p>Strong & durable storage solutions.</p>
     </div>
     <div class="card">
       <h4>Boring Fittings</h4>
-      <p>56 essential fittings</p>
+      <p>Reliable essential fittings available.</p>
     </div>
   </div>
 </section>
 
+<!-- VISIT SECTION -->
+<section class="visit-section">
+  <h2>Visit Our Shop</h2>
+  <p>📍 Vishal Marble, Supriya Road,<br>
+  West Champaran, Bettiah,<br>
+  Bihar – 845438</p>
+
+  <p>📞 Call: 8409949407</p>
+
+  <p>🕒 Timings:<br>
+  Mon–Sat: 9:00 AM – 6:30 PM<br>
+  Sunday: 9:00 AM – 4:00 PM</p>
+
+  <a href="https://wa.me/918409949407" target="_blank" class="whatsapp-btn">
+    WhatsApp Enquiry
+  </a>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p><strong>Vishal Marble</strong></p>
-  <p>Supriya Road, Bettiah, Bihar – 845438</p>
-  <p>📞 8409949407</p>
+  © 2026 Vishal Marble. All rights reserved.
 </footer>
 
 </body>
