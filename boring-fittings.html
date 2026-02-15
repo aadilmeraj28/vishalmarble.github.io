@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boring Fittings | Vishal Marble</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* PAGE HEADER */
+.page-header{
+background:#000;
+color:#fff;
+padding:40px 20px;
+text-align:center;
+}
+
+.page-header h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.page-header p{
+opacity:0.7;
+}
+
+/* PRODUCT GRID */
+.products-container{
+padding:50px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+background:#fff;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+padding:20px;
+text-align:center;
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-5px);
+}
+
+/* PRODUCT IMAGE */
+.product-card img{
+width:100%;
+height:180px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+/* PRODUCT NAME */
+.product-card h3{
+margin-bottom:10px;
+}
+
+/* PRICE */
+.price{
+color:#1b4a2b;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+.add-btn{
+background:#1b4a2b;
+color:#fff;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.add-btn:hover{
+background:#000;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+<header>
+
+<h1>Vishal Marble</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="boring-fittings.html">Boring Fittings</a>
+<a href="cart.html">Cart</a>
+</nav>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+
+<h1>Boring Fittings Collection</h1>
+
+<p>Premium CPVC Pro fittings available at Vishal Marble</p>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+<section class="products-container">
+
+<div class="products-grid">
+
+
+<!-- PRODUCT 1 -->
+<div class="product-card">
+
+<img src="https://via.placeholder.com/200">
+
+<h3>Elbow 90° - SOC</h3>
+
+<div class="price">₹30</div>
+
+<button class="add-btn"
+onclick="addToCart('Elbow 90° - SOC',30)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<!-- PRODUCT 2 -->
+<div class="product-card">
+
+<img src="https://via.placeholder.com/200">
+
+<h3>Tee - SOC</h3>
+
+<div class="price">₹40</div>
+
+<button class="add-btn"
+onclick="addToCart('Tee - SOC',40)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<!-- PRODUCT 3 -->
+<div class="product-card">
+
+<img src="https://via.placeholder.com/200">
+
+<h3>Reducer Bushing</h3>
+
+<div class="price">₹44</div>
+
+<button class="add-btn"
+onclick="addToCart('Reducer Bushing',44)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+<!-- PRODUCT 4 -->
+<div class="product-card">
+
+<img src="https://via.placeholder.com/200">
+
+<h3>Coupler - SOC</h3>
+
+<div class="price">₹70</div>
+
+<button class="add-btn"
+onclick="addToCart('Coupler - SOC',70)">
+Add to Cart
+</button>
+
+</div>
+
+
+
+</div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 Vishal Marble. All rights reserved.</p>
+
+</footer>
+
+
+
+<!-- CART SCRIPT -->
+<script>
+
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+name:name,
+price:price
+});
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+alert("Added to cart");
+
+}
+
+</script>
+
+
+</body>
+</html>
+
