@@ -6,232 +6,420 @@
 <title>Products | Vishal Marble</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI", Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI", Arial, sans-serif;
 }
 
 body{
-  background:#f4f4f4;
-  color:#222;
+background:#f4f4f4;
+color:#222;
 }
 
+
 /* NAVBAR */
+
 header{
-  background:#000;
-  color:#fff;
-  padding:18px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+background:#000;
+color:#fff;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 header h1{
-  font-size:22px;
-  letter-spacing:1px;
+font-size:22px;
+letter-spacing:1px;
 }
 
 nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:28px;
-  font-weight:500;
+color:#fff;
+text-decoration:none;
+margin-left:28px;
+font-weight:500;
 }
 
 nav a:hover{
-  text-decoration:underline;
+text-decoration:underline;
 }
 
+
 /* PAGE HEADER */
+
 .page-head{
-  background:#1f4d2f;
-  color:#fff;
-  text-align:center;
-  padding:90px 40px;
+background:#1f4d2f;
+color:#fff;
+text-align:center;
+padding:90px 40px;
 }
 
 .page-head h2{
-  font-size:38px;
-  margin-bottom:10px;
+font-size:38px;
+margin-bottom:10px;
 }
 
 .page-head p{
-  opacity:0.95;
+opacity:0.95;
 }
 
+
 /* CONTENT */
+
 .section{
-  padding:80px 60px;
-  background:#fff;
+padding:80px 60px;
+background:#fff;
 }
 
 .category{
-  margin-bottom:60px;
+margin-bottom:60px;
 }
 
 .category h3{
-  font-size:26px;
-  margin-bottom:10px;
+font-size:26px;
+margin-bottom:10px;
 }
 
 .category p{
-  color:#555;
-  margin-bottom:25px;
+color:#555;
+margin-bottom:25px;
 }
 
+
 /* PRODUCT LIST */
+
 .list{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .item{
-  background:#fafafa;
-  padding:25px;
-  border-left:4px solid #1f4d2f;
+background:#fafafa;
+padding:25px;
+border-left:4px solid #1f4d2f;
+transition:0.3s;
+}
+
+.item:hover{
+transform:translateY(-4px);
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 .item h4{
-  margin-bottom:6px;
+margin-bottom:6px;
 }
 
 .item span{
-  font-size:14px;
-  color:#666;
+font-size:14px;
+color:#666;
 }
 
-/* ENQUIRE */
+
+/* CLICKABLE CARD */
+
+.link-card{
+text-decoration:none;
+color:inherit;
+}
+
+
+/* BUTTON */
+
 .enquire{
-  text-align:center;
-  margin-top:80px;
+text-align:center;
+margin-top:80px;
 }
 
 .enquire a{
-  display:inline-block;
-  padding:14px 34px;
-  background:#000;
-  color:#fff;
-  text-decoration:none;
-  font-size:15px;
+display:inline-block;
+padding:14px 34px;
+background:#000;
+color:#fff;
+text-decoration:none;
+font-size:15px;
 }
 
 .enquire a:hover{
-  background:#111;
+background:#111;
 }
+
 
 /* FOOTER */
+
 footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:50px 20px;
-  margin-top:80px;
+background:#000;
+color:#fff;
+text-align:center;
+padding:50px 20px;
+margin-top:80px;
 }
 
+
 /* MOBILE */
+
 @media(max-width:900px){
-  .list{
-    grid-template-columns:1fr 1fr;
-  }
+.list{
+grid-template-columns:1fr 1fr;
+}
 }
 
 @media(max-width:600px){
-  header{
-    flex-direction:column;
-    gap:10px;
-  }
-  .list{
-    grid-template-columns:1fr;
-  }
+
+header{
+flex-direction:column;
+gap:10px;
 }
+
+.list{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-  <h1>Vishal Marble</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booking.html">Advance Booking</a>
-  </nav>
+
+<h1>Vishal Marble</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Products</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="cart.html">Cart</a>
+
+<a href="booking.html">Advance Booking</a>
+
+</nav>
+
 </header>
 
+
+
 <section class="page-head">
-  <h2>Our Products</h2>
-  <p>Premium showroom collection • Visit shop for selection</p>
+
+<h2>Our Products</h2>
+
+<p>Premium showroom collection • Visit shop for selection</p>
+
 </section>
+
+
 
 <section class="section">
 
-  <!-- MARBLE -->
-  <div class="category">
-    <h3>Marble Collection</h3>
-    <p>Carefully selected premium marble varieties for flooring & interiors.</p>
-    <div class="list">
-      <div class="item"><h4>Marble Type 1</h4><span>Premium quality finish</span></div>
-      <div class="item"><h4>Marble Type 2</h4><span>Elegant natural patterns</span></div>
-      <div class="item"><h4>Marble Type 3</h4><span>Durable & long-lasting</span></div>
-      <div class="item"><h4>Marble Type 4</h4><span>Classic interior use</span></div>
-      <div class="item"><h4>Marble Type 5</h4><span>High-grade selection</span></div>
-    </div>
-  </div>
 
-  <!-- TILES -->
-  <div class="category">
-    <h3>Tiles</h3>
-    <p>Modern and classic tile designs suitable for homes and shops.</p>
-    <div class="list">
-      <div class="item"><h4>Tile Design 1</h4><span>Modern pattern</span></div>
-      <div class="item"><h4>Tile Design 2</h4><span>Glossy finish</span></div>
-      <div class="item"><h4>Tile Design 3</h4><span>Matte surface</span></div>
-      <div class="item"><h4>Tile Design 4</h4><span>Premium quality</span></div>
-      <div class="item"><h4>Tile Design 5</h4><span>Interior flooring</span></div>
-      <div class="item"><h4>+ 8 more designs</h4><span>Available in showroom</span></div>
-    </div>
-  </div>
+<!-- MARBLE -->
 
-  <!-- WATER TANK -->
-  <div class="category">
-    <h3>Water Tanks</h3>
-    <p>Strong, durable tanks suitable for residential use.</p>
-    <div class="list">
-      <div class="item"><h4>Water Tank Type 1</h4><span>High durability</span></div>
-      <div class="item"><h4>Water Tank Type 2</h4><span>Long life storage</span></div>
-      <div class="item"><h4>Water Tank Type 3</h4><span>Quality assured</span></div>
-    </div>
-  </div>
+<div class="category">
 
-  <!-- BORING FITTINGS -->
-  <div class="category">
-    <h3>Boring Fittings</h3>
-    <p>Complete range of essential boring and fitting articles.</p>
-    <div class="list">
-      <div class="item"><h4>Article 1</h4><span>Boring fitting</span></div>
-      <div class="item"><h4>Article 2</h4><span>Boring fitting</span></div>
-      <div class="item"><h4>Article 3</h4><span>Boring fitting</span></div>
-      <div class="item"><h4>Article 4</h4><span>Boring fitting</span></div>
-      <div class="item"><h4>Article 5</h4><span>Boring fitting</span></div>
-      <div class="item"><h4>+ 51 more articles</h4><span>Available in shop</span></div>
-    </div>
-  </div>
+<h3>Marble Collection</h3>
 
-  <div class="enquire">
-    <a href="booking.html">Enquire / Advance Booking</a>
-  </div>
+<p>Carefully selected premium marble varieties for flooring & interiors.</p>
+
+<div class="list">
+
+<div class="item">
+<h4>Italian Marble</h4>
+<span>Luxury premium selection</span>
+</div>
+
+<div class="item">
+<h4>Makrana Marble</h4>
+<span>Classic high durability</span>
+</div>
+
+<div class="item">
+<h4>White Marble</h4>
+<span>Elegant natural finish</span>
+</div>
+
+<div class="item">
+<h4>Designer Marble</h4>
+<span>Modern interior use</span>
+</div>
+
+<div class="item">
+<h4>Premium Marble Range</h4>
+<span>Available in showroom</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- TILES -->
+
+<div class="category">
+
+<h3>Tiles</h3>
+
+<p>Modern and classic tile designs suitable for homes and shops.</p>
+
+<div class="list">
+
+<div class="item">
+<h4>Floor Tiles</h4>
+<span>Premium finish</span>
+</div>
+
+<div class="item">
+<h4>Wall Tiles</h4>
+<span>Modern design</span>
+</div>
+
+<div class="item">
+<h4>Gloss Tiles</h4>
+<span>Luxury shine</span>
+</div>
+
+<div class="item">
+<h4>Matte Tiles</h4>
+<span>Elegant surface</span>
+</div>
+
+<div class="item">
+<h4>Designer Collection</h4>
+<span>Available in showroom</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- WATER TANK -->
+
+<div class="category">
+
+<h3>Water Tanks</h3>
+
+<p>Strong, durable tanks suitable for residential use.</p>
+
+<div class="list">
+
+<div class="item">
+<h4>Sintex Tank</h4>
+<span>Trusted quality</span>
+</div>
+
+<div class="item">
+<h4>Plastic Tank</h4>
+<span>Long life storage</span>
+</div>
+
+<div class="item">
+<h4>Premium Tank</h4>
+<span>Heavy duty quality</span>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- BORING FITTINGS (CLICKABLE) -->
+
+<div class="category">
+
+<h3>Boring Fittings</h3>
+
+<p>Complete CPVC Pro fitting collection.</p>
+
+<div class="list">
+
+
+<a href="boring-fittings.html" class="link-card">
+
+<div class="item">
+
+<h4>View Complete Collection</h4>
+
+<span>Click to open all boring fittings</span>
+
+</div>
+
+</a>
+
+
+<div class="item">
+<h4>CPVC Elbow</h4>
+<span>Premium fitting</span>
+</div>
+
+<div class="item">
+<h4>CPVC Tee</h4>
+<span>High durability</span>
+</div>
+
+<div class="item">
+<h4>Reducer</h4>
+<span>Precision fitting</span>
+</div>
+
+<div class="item">
+<h4>Coupler</h4>
+<span>Reliable connection</span>
+</div>
+
+<div class="item">
+<h4>+ 50 more articles</h4>
+<span>Available in showroom</span>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="enquire">
+
+<a href="booking.html">
+
+Enquire / Advance Booking
+
+</a>
+
+</div>
+
+
 
 </section>
 
+
+
 <footer>
-  <p><strong>Vishal Marble</strong></p>
-  <p>Supriya Road, Bettiah, Bihar – 845438</p>
-  <p>📞 8409949407</p>
+
+<p><strong>Vishal Marble</strong></p>
+
+<p>Supriya Road, Bettiah, Bihar – 845438</p>
+
+<p>📞 8409949407</p>
+
+<p>© 2026 Vishal Marble. All rights reserved.</p>
+
 </footer>
+
+
 
 </body>
 </html>
