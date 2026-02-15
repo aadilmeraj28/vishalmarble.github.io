@@ -1,238 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Boring Fittings | Vishal Marble</title>
+    <!-- SEO Meta Tags -->
+    <title>Boring & Fittings Services | Vishal Marble Bettiah</title>
+    <meta name="description" content="Professional marble boring, cutting, and fitting services in Bettiah. Precision installation for countertops, floors, walls, and custom marble work.">
+    <meta name="keywords" content="marble boring Bettiah, marble fitting Bettiah, marble cutting service Bihar, marble installation West Champaran">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* PAGE HEADER */
-.page-header{
-background:#000;
-color:#fff;
-padding:40px 20px;
-text-align:center;
-}
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
 
-.page-header h1{
-font-size:32px;
-margin-bottom:10px;
-}
+        /* Header */
+        header {
+            background: #000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
 
-.page-header p{
-opacity:0.7;
-}
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
 
-/* PRODUCT GRID */
-.products-container{
-padding:50px 20px;
-max-width:1200px;
-margin:auto;
-}
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
 
-.products-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+        nav a:hover {
+            color: #fff;
+        }
 
-/* PRODUCT CARD */
-.product-card{
-background:#fff;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-padding:20px;
-text-align:center;
-transition:0.3s;
-}
+        /* Hero Section */
+        .hero {
+            height: 40vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-.product-card:hover{
-transform:translateY(-5px);
-}
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 500;
+        }
 
-/* PRODUCT IMAGE */
-.product-card img{
-width:100%;
-height:180px;
-object-fit:contain;
-margin-bottom:15px;
-}
+        .hero p {
+            color: #ccc;
+            margin-top: 10px;
+        }
 
-/* PRODUCT NAME */
-.product-card h3{
-margin-bottom:10px;
-}
+        /* Section */
+        .section {
+            padding: 60px 5%;
+        }
 
-/* PRICE */
-.price{
-color:#1b4a2b;
-font-weight:bold;
-margin-bottom:15px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
 
-/* BUTTON */
-.add-btn{
-background:#1b4a2b;
-color:#fff;
-border:none;
-padding:10px 20px;
-cursor:pointer;
-border-radius:5px;
-}
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-.add-btn:hover{
-background:#000;
-}
+        .card {
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #222;
+        }
 
-</style>
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #444;
+        }
 
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
 
-
-<!-- NAVBAR -->
 <header>
-
-<h1>Vishal Marble</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="boring-fittings.html">Boring Fittings</a>
-<a href="cart.html">Cart</a>
-</nav>
-
+    <div class="logo">VISHAL MARBLE</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
+<section class="hero">
+    <div>
+        <h1>Boring & Fittings Services</h1>
+        <p>Precision Marble Cutting, Drilling & Professional Installation</p>
+    </div>
+</section>
 
-<!-- PAGE HEADER -->
-<section class="page-header">
+<section class="section">
+    <h2 class="section-title">Our Services</h2>
 
-<h1>Boring Fittings Collection</h1>
+    <div class="grid">
 
-<p>Premium CPVC Pro fittings available at Vishal Marble</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2070">
+            <div class="card-content">
+                <h3>Marble Boring</h3>
+                <p>High‑precision drilling for washbasins, pipelines, and custom fittings.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070">
+            <div class="card-content">
+                <h3>Marble Cutting</h3>
+                <p>Accurate cutting using advanced machines for perfect finishing.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344?q=80&w=2070">
+            <div class="card-content">
+                <h3>Countertop Fitting</h3>
+                <p>Professional kitchen and bathroom marble installation services.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070">
+            <div class="card-content">
+                <h3>Custom Marble Work</h3>
+                <p>Custom shaping and fitting according to your design requirements.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <a href="https://wa.me/918099494907" class="whatsapp-btn">WhatsApp for Service Enquiry</a>
+    </div>
 
 </section>
 
-
-
-<!-- PRODUCTS -->
-<section class="products-container">
-
-<div class="products-grid">
-
-
-<!-- PRODUCT 1 -->
-<div class="product-card">
-
-<img src="https://via.placeholder.com/200">
-
-<h3>Elbow 90° - SOC</h3>
-
-<div class="price">₹30</div>
-
-<button class="add-btn"
-onclick="addToCart('Elbow 90° - SOC',30)">
-Add to Cart
-</button>
-
-</div>
-
-
-
-<!-- PRODUCT 2 -->
-<div class="product-card">
-
-<img src="https://via.placeholder.com/200">
-
-<h3>Tee - SOC</h3>
-
-<div class="price">₹40</div>
-
-<button class="add-btn"
-onclick="addToCart('Tee - SOC',40)">
-Add to Cart
-</button>
-
-</div>
-
-
-
-<!-- PRODUCT 3 -->
-<div class="product-card">
-
-<img src="https://via.placeholder.com/200">
-
-<h3>Reducer Bushing</h3>
-
-<div class="price">₹44</div>
-
-<button class="add-btn"
-onclick="addToCart('Reducer Bushing',44)">
-Add to Cart
-</button>
-
-</div>
-
-
-
-<!-- PRODUCT 4 -->
-<div class="product-card">
-
-<img src="https://via.placeholder.com/200">
-
-<h3>Coupler - SOC</h3>
-
-<div class="price">₹70</div>
-
-<button class="add-btn"
-onclick="addToCart('Coupler - SOC',70)">
-Add to Cart
-</button>
-
-</div>
-
-
-
-</div>
-</section>
-
-
-
-<!-- FOOTER -->
 <footer>
+    <h3>Visit Our Shop</h3>
+    <p>Vishal Marble, Supriya Road, Bettiah, Bihar – 845438</p>
+    <p>Call: 8099494907</p>
 
-<p>© 2026 Vishal Marble. All rights reserved.</p>
-
+    <div class="footer-bottom">
+        © 2026 Vishal Marble. All rights reserved.
+    </div>
 </footer>
-
-
-
-<!-- CART SCRIPT -->
-<script>
-
-function addToCart(name, price){
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-cart.push({
-name:name,
-price:price
-});
-
-localStorage.setItem("cart", JSON.stringify(cart));
-
-alert("Added to cart");
-
-}
-
-</script>
-
 
 </body>
 </html>
-
