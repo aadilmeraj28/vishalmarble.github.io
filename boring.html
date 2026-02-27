@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boring Fittings | Vishal Marble</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: black;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      border-top: 5px solid #1f4d2e;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <a href="products.html">← Back to Products</a>
+  </div>
+  <div>
+    <a href="cart.html">🛒 View Cart</a>
+  </div>
+</header>
+
+<h1>Boring Fittings Articles</h1>
+
+<div class="container">
+
+  <!-- 56 Articles -->
+  <script>
+    for (let i = 1; i <= 56; i++) {
+      document.write(`
+        <div class="card">
+          <h3>Article ${i}</h3>
+          <p>Boring Fitting Item</p>
+          <button onclick="addToCart('Article ${i}')">Add to Cart</button>
+        </div>
+      `);
+    }
+  </script>
+
+</div>
+
+<script src="cart.js"></script>
+
+</body>
+</html>
